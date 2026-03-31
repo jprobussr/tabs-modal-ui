@@ -29,10 +29,12 @@ tabButtons.forEach((button) => {
     // Reset Tabs
     tabButtons.forEach((tab) => {
       tab.classList.remove('active');
+      tab.setAttribute('aria-selected', 'false');
     });
 
     // Activate clicked tab
     button.classList.add('active');
+    button.setAttribute('aria-selected', 'true');
 
     // Reset panels
     tabPanels.forEach((panel) => {
