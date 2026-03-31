@@ -23,3 +23,29 @@ document.addEventListener('keydown', (event) => {
     modalOverlay.classList.add('hidden');
   }
 });
+
+tabButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    // Reset Tabs
+    tabButtons.forEach((tab) => {
+      tab.classList.remove('active');
+    });
+
+    // Activate clicked tab
+    button.classList.add('active');
+
+    // Reset panels
+    tabPanels.forEach((panel) => {
+      panel.classList.remove('active');
+    });
+
+    // Show correct panel
+    const target = button.dataset.tab;
+
+    tabPanels.forEach((panel) => {
+      if (panel.dataset.panel === target) {
+        panel.classList.add('active');
+      }
+    });
+  });
+});
