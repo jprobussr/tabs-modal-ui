@@ -21,7 +21,7 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
   background: var(--bg);
   color: var(--text);
   display: flex;
@@ -45,11 +45,6 @@ button {
   font: inherit;
 }
 
-.container {
-  width: min(100% - 2rem, var(--container));
-  margin-inline: auto;
-}
-
 main {
   flex: 1;
   display: flex;
@@ -58,14 +53,19 @@ main {
   padding: 2rem 0 3rem;
 }
 
+.container {
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
+}
+
 .site-header {
   border-bottom: 1px solid var(--border);
 }
 
 .header-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem 0;
 }
 
@@ -115,7 +115,7 @@ main {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .tabs {
@@ -217,10 +217,10 @@ main {
 }
 
 .modal p {
-    margin-top: 0.75rem;
-    color: var(--muted);
+  margin-top: 0.75rem;
+  color: var(--muted);
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
